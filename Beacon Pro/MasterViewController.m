@@ -253,8 +253,8 @@
          }];
         
         // derive sorted sightings array
-        NSSortDescriptor *minorSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"minor" ascending:YES selector:@selector(localizedStandardCompare:)];
-        NSSortDescriptor *majorSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"major" ascending:YES selector:@selector(localizedStandardCompare:)];
+        NSSortDescriptor *minorSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"major" ascending:YES selector:@selector(localizedStandardCompare:)];
+        NSSortDescriptor *majorSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"minor" ascending:YES selector:@selector(localizedStandardCompare:)];
         NSArray *sortedSightings = [unsortedSightings sortedArrayUsingDescriptors:@[minorSortDescriptor, majorSortDescriptor]];
         
         // update sightings array & reload table data
